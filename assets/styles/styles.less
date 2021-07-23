@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@400;700&display=swap");
+
 html,
 body {
   margin: 0;
@@ -16,6 +18,7 @@ body {
   -moz-animation: bgAnimate 30000ms ease infinite;
   animation: bgAnimate 30000ms ease infinite;
   position: relative;
+  font-family: "Raleway", sans-serif;
   #top {
     position: fixed;
     right: 2rem;
@@ -26,7 +29,7 @@ body {
     background-color: rgb(249, 248, 113);
     color: #222831;
     border: none;
-    transition: all ease 200ms;
+    transition: all ease 150ms;
   }
 }
 
@@ -98,6 +101,23 @@ nav {
     a {
       text-decoration: none;
       color: white;
+      position: relative;
+    }
+    a::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      bottom: 0;
+      left: 0;
+      background-color: white;
+      transform: scale(0);
+      transform-origin: left;
+      transition: transform 200ms ease-in;
+    }
+    a:hover::after {
+      transform: scale(1);
+      transform-origin: right;
     }
   }
   #toggler:checked ~ #nav-right {
@@ -147,11 +167,6 @@ header {
         color: #222831;
         text-decoration: none;
         padding: 0.5em;
-        // transition: transform 300ms;
-      }
-      a:hover {
-        transform: translateY(50px);
-        box-shadow: #f9f871;
       }
     }
   }
@@ -242,6 +257,7 @@ main {
         font-weight: bold;
         letter-spacing: 0.1em;
         color: #f9f871;
+        font-family: "Open Sans", sans-serif;
       }
     }
     .email-form {
