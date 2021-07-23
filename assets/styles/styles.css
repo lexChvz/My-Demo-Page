@@ -132,13 +132,20 @@ header #head-container .svg-girl svg #coffee-steam {
 header #head-container .head h1 {
   margin-top: 0;
 }
-header #head-container .head button {
+header #head-container .head p {
+  margin-bottom: 1.5em;
+}
+header #head-container .head a {
   background-color: #f9f871;
-  border: none;
   width: 10rem;
   height: 3rem;
   color: #222831;
-  font-weight: bold;
+  text-decoration: none;
+  padding: 0.5em;
+}
+header #head-container .head a:hover {
+  transform: translateY(50px);
+  box-shadow: #f9f871;
 }
 main #about h2,
 main #services h2,
